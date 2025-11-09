@@ -1,0 +1,17 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: retail-data-stream
+  data:
+    cassandra:
+      contact-points: localhost
+      port: 9042
+      keyspace-name: retail_data
+      schema-action: create-if-not-exists
+
+security:
+  jwt:
+    secret: k5UvG4zPz/Z+j/g07C8jjdWqN7qvpcVzWz2x48c3g5o=
+    expiration-ms: 3600000
