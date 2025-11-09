@@ -1,0 +1,277 @@
+{
+	"info": {
+		"_postman_id": "6023be80-b257-4715-87c1-9fb6cca861cd",
+		"name": "retail-platform",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "274839",
+		"_collection_link": "https://aishwaryamahindru.postman.co/workspace/Aishwarya~a0cf09fc-04b7-4221-8824-42f39b1bf7d6/collection/274839-6023be80-b257-4715-87c1-9fb6cca861cd?action=share&source=collection_link&creator=274839"
+	},
+	"item": [
+		{
+			"name": "Create Retail Metrics",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2huIiwiaWF0IjoxNzYyNjk1MzU5LCJleHAiOjE3NjI2OTg5NTl9.nSqCvdlKMvacidJynH6WONrJO5yjexYQzzmUvywP4o4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Tenant-Id",
+						"value": "retailerA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/ad/CAMPAIGN_1001/clickx",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"ad",
+						"CAMPAIGN_1001",
+						"clickx"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Retail Metrics",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2huIiwiaWF0IjoxNzYyNjIxNjEwLCJleHAiOjE3NjI2MjUyMTB9.HW6dFqvasBRntyWSyz_-po8AXvkrqN0ee561goUWHJ0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Tenant-Id",
+						"value": "retailerA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"key\": {\r\n      \"eventType\": \"add_to_cart\",\r\n      \"productId\": \"P123\"\r\n    },\r\n    \"metricValue\": 5.0\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/metrics",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"metrics"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Generate Token",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"key\": {\r\n      \"eventType\": \"add_to_cart\",\r\n      \"productId\": \"P123\"\r\n    },\r\n    \"metricValue\": 5.0\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/auth/login?username=john&password=admin123",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"login"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "john"
+						},
+						{
+							"key": "password",
+							"value": "admin123"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AdClick Count Increment1",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2huIiwiaWF0IjoxNzYyNjk1MzU5LCJleHAiOjE3NjI2OTg5NTl9.nSqCvdlKMvacidJynH6WONrJO5yjexYQzzmUvywP4o4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Tenant-Id",
+						"value": "retailerA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/ad/CAMPAIGN_1001/click",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"ad",
+						"CAMPAIGN_1001",
+						"click"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get AdClick Count",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2huIiwiaWF0IjoxNzYyNjk1MzU5LCJleHAiOjE3NjI2OTg5NTl9.nSqCvdlKMvacidJynH6WONrJO5yjexYQzzmUvywP4o4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Tenant-Id",
+						"value": "retailerA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/ad/CAMPAIGN_1001/clicks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"ad",
+						"CAMPAIGN_1001",
+						"clicks"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
