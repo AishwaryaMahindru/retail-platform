@@ -1,85 +1,107 @@
-retail-platform/
-├── shared-libs/
-│   ├── build.gradle
-│   └── src/
-│       └── main/
-│           └── java/
-│               └── com/retail/platform/shared/
-│                   ├── dto/
-│                   ├── util/
-│                   └── config/
-├── ingestion/
-│   ├── build.gradle
-│   └── src/
-│       ├── main/
-│       │   ├── java/com/retail/platform/ingestion/
-│       │   │   ├── controller/
-│       │   │   ├── service/
-│       │   │   └── config/
-│       │   └── resources/
-│       │       └── application.yml
-│       └── test/
-├── retail-data-stream/
-│   ├── build.gradle
-│   └── src/
-│       ├── main/
-│       │   ├── java/com/retail/platform/retaildatastream/
-│       │   │   ├── consumer/
-│       │   │   ├── processor/
-│       │   │   └── config/
-│       │   └── resources/
-│       │       ├── application.yml
-│       │       └── schema.cql
-│       └── test/
-├── metrics-service/
-│   ├── build.gradle
-│   └── src/
-│       ├── main/
-│       │   ├── java/com/retail/platform/metrics/
-│       │   │   ├── controller/
-│       │   │   └── service/
-│       │   └── resources/
-│       │       └── application.yml
-│       └── test/
-├── ad-service/
-│   ├── build.gradle
-│   └── src/
-│       ├── main/
-│       │   ├── java/com/retail/platform/ad/
-│       │   │   ├── controller/
-│       │   ├── service/
-│       │   └── model/
-│       │   └── resources/
-│       │       └── application.yml
-│       └── test/
-├── user-tenant-service/
-│   ├── build.gradle
-│   └── src/
-│       ├── main/
-│       │   ├── java/com/retail/platform/usertenant/
-│       │   │   ├── controller/
-│       │   │   └── service/
-│       │   └── resources/
-│       │       └── application.yml
-│       └── test/
-├── api-gateway/
-│   ├── configuration/
-│   └── helm/  (if using K8s)
-├── auth-service/
-│   ├── build.gradle
-│   └── src/
-│       ├── main/
-│       │   ├── java/com/retail/platform/auth/
-│       │   ├── resources/
-│       │   │   └── application.yml
-│       └── test/
-├── observability/
-│   ├── prometheus/
-│   ├── grafana/
-│   └── elk/
-├── deployment/
-│   ├── k8s/
-│   └── terraform/
-├── docker-compose.yml
-├── settings.gradle
-└── README.md
+Output of tree /F > structure.txt
+Folder PATH listing for volume OS
+Volume serial number is 8AFC-58D2
+C:.
+ª   .gitignore
+ª   build.gradle
+ª   CompleteProjectStructure.txt
+ª   docker-compose.yml
+ª   gradle.properties
+ª   README.md
+ª   settings.gradle
+ª
++---data-metrics
+ª   ª   build.gradle
+ª   ª
+ª   +---src
+ª       +---main
+ª       ª   +---java
+ª       ª   ª   +---com
+ª       ª   ª       +---retail
+ª       ª   ª           +---platform
+ª       ª   ª               +---datametrics
+ª       ª   ª                   ª   DataMetricsApplication.java
+ª       ª   ª                   ª
+ª       ª   ª                   +---config
+ª       ª   ª                   ª       CassandraConfig.java
+ª       ª   ª                   ª       SecurityConfig.java
+ª       ª   ª                   ª
+ª       ª   ª                   +---controller
+ª       ª   ª                   ª       AdMetricsController.java
+ª       ª   ª                   ª       AuthController.java
+ª       ª   ª                   ª       RetailDataController.java
+ª       ª   ª                   ª
+ª       ª   ª                   +---dto
+ª       ª   ª                   ª       MetricResponse.java
+ª       ª   ª                   ª
+ª       ª   ª                   +---exception
+ª       ª   ª                   ª       NotFoundException.java
+ª       ª   ª                   ª
+ª       ª   ª                   +---model
+ª       ª   ª                   ª       AdClick.java
+ª       ª   ª                   ª       AdClickKey.java
+ª       ª   ª                   ª       EventMetric.java
+ª       ª   ª                   ª       EventMetricKey.java
+ª       ª   ª                   ª       Tenant.java
+ª       ª   ª                   ª       User.java
+ª       ª   ª                   ª       UserTenant.java
+ª       ª   ª                   ª
+ª       ª   ª                   +---repository
+ª       ª   ª                   ª       AdClickRepository.java
+ª       ª   ª                   ª       EventMetricRepository.java
+ª       ª   ª                   ª       TenantRepository.java
+ª       ª   ª                   ª       UserRepository.java
+ª       ª   ª                   ª       UserTenantRepository.java
+ª       ª   ª                   ª
+ª       ª   ª                   +---security
+ª       ª   ª                   ª       JwtAuthFilter.java
+ª       ª   ª                   ª       JwtUtil.java
+ª       ª   ª                   ª
+ª       ª   ª                   +---service
+ª       ª   ª                       ª   AdMetricsService.java
+ª       ª   ª                       ª   AuthService.java
+ª       ª   ª                       ª   RetailDataService.java
+ª       ª   ª                       ª
+ª       ª   ª                       +---impl
+ª       ª   ª                               AdMetricsServiceImpl.java
+ª       ª   ª                               RetailDataServiceImpl.java
+ª       ª   ª
+ª       ª   +---resources
+ª       ª           application.yml
+ª       ª           init-sample-data.cql
+ª       ª           logback-spring.xml
+ª       ª           schema.cql
+ª       ª
+ª       +---test
+ª               RetailDataStreamApplicationTests.java
+ª
++---postman-collection
+ª       retail-platform.postman_collection.json
+ª
++---shared-libs
+ª   ª   build.gradle
+ª   ª
+ª   +---build
+ª   ª   +---libs
+ª   ª   ª       shared-libs-1.0.0.jar
+ª   ª   ª
+ª   ª   +---tmp
+ª   ª       +---jar
+ª   ª               MANIFEST.MF
+ª   ª
+ª   +---src
+ª       +---main
+ª           +---java
+ª               +---com
+ª                   +---retail
+ª                       +---platform
+ª                           +---shared
++---System Design
+    +---CodeFlowDiagram
+    ª       Retail Platform Flow Diagram.jam
+    ª       Retail Platform Flow Diagram.png
+    ª
+    +---HighLevelDesign
+            Retail Platform High-level Architecture.jam
+            Retail Platform High-level Architecture.pdf
+
