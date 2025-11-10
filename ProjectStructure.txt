@@ -1,0 +1,57 @@
+retail-platform/
+├── shared-libs/
+│   └── src/main/java/com/retail/platform/shared/
+│       ├── dto/
+│       ├── util/
+│       └── config/
+├── retail-data-stream/
+│   ├── build.gradle
+│   ├── src/
+│   │   ├── main/
+│   │   │   ├── java/com/retail/platform/retaildatastream/
+│   │   │   │   ├── RetailDataStreamApplication.java
+│   │   │   ├── config/
+│   │   │   │   ├── CassandraConfig.java
+│   │   │   │   └── SecurityConfig.java
+│   │   │   ├── controller/
+│   │   │   │   ├── AuthController.java
+│   │   │   │   ├── RetailDataController.java
+│   │   │   │   └── AdMetricsController.java
+│   │   │   ├── dto/
+│   │   │   │   └── MetricResponse.java
+│   │   │   ├── model/
+│   │   │   │   ├── User.java
+│   │   │   ├── model/
+│   │   │   │   ├── Tenant.java
+│   │   │   │   ├── UserTenant.java
+│   │   │   │   ├── EventMetric.java
+│   │   │   │   ├── EventMetricKey.java
+│   │   │   │   ├── AdClick.java
+│   │   │   │   └── AdClickKey.java
+│   │   │   ├── repository/
+│   │   │   │   ├── UserRepository.java
+│   │   │   │   ├── TenantRepository.java
+│   │   │   │   ├── UserTenantRepository.java
+│   │   │   │   ├── EventMetricRepository.java
+│   │   │   │   └── AdClickRepository.java
+│   │   │   ├── security/
+│   │   │   │   ├── JwtUtil.java
+│   │   │   │   └── JwtAuthFilter.java
+│   │   │   ├── service/
+│   │   │   │   ├── AuthService.java
+│   │   │   ├── service/
+│   │   │   │   ├── RetailDataService.java
+│   │   │   │   ├── AdMetricsService.java
+│   │   │   └── service/impl/
+│   │   │       ├── RetailDataServiceImpl.java
+│   │   │       └── AdMetricsServiceImpl.java
+│   │   └── resources/
+│   │       ├── application.yml
+│   │       ├── schema.cql
+│   │       ├── init-sample-data.cql
+│   │       └── logback-spring.xml
+│   └── src/test/java/com/retail/platform/retaildatastream/
+│       └── RetailDataStreamApplicationTests.java
+├── docker-compose.yml
+├── settings.gradle
+└── README.md
