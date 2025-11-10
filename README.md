@@ -2,7 +2,8 @@
 A real-time streaming platform for an online shopping network. This platform will process real- time data from retailer websites, capturing customer interactions, ad engagements, etc. The processed data will be utilized to generate insights via APIs, enabling end users to optimize their advertising campaigns &amp; enhance user engagement.
 
 ### Code Flow Diagram:
-https://github.com/AishwaryaMahindru/retail-platform/blob/main/System%20Design/CodeFlowDiagram/Retail%20Platform%20Flow%20Diagram.png
+![alt text](./System Design/CodeFlowDiagram/Retail Platform Flow Diagram.png)
+
 
 ### Note:
 For the purpose of this Proof of Concept (POC), the APIs of the Metrics Service, Ad Service, Authorization Service, and User & Tenant Service have been consolidated into a single service module.
