@@ -76,7 +76,14 @@ C:.
 ª               RetailDataStreamApplicationTests.java
 ª
 +---postman-collection
-ª       retail-platform.postman_collection.json
+ª   ª   retail-platform.postman_collection.json
+ª   ª
+ª   +---API Run Snapshots
+ª           CreateRetailMetrics.png
+ª           GenerateToken.png
+ª           GetAdClick.png
+ª           GetRetailMetrics.png
+ª           IncrementAdClick.png
 ª
 +---shared-libs
 ª   ª   build.gradle
