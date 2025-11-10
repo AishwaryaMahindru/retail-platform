@@ -1,0 +1,85 @@
+retail-platform/
+├── shared-libs/
+│   ├── build.gradle
+│   └── src/
+│       └── main/
+│           └── java/
+│               └── com/retail/platform/shared/
+│                   ├── dto/
+│                   ├── util/
+│                   └── config/
+├── ingestion/
+│   ├── build.gradle
+│   └── src/
+│       ├── main/
+│       │   ├── java/com/retail/platform/ingestion/
+│       │   │   ├── controller/
+│       │   │   ├── service/
+│       │   │   └── config/
+│       │   └── resources/
+│       │       └── application.yml
+│       └── test/
+├── retail-data-stream/
+│   ├── build.gradle
+│   └── src/
+│       ├── main/
+│       │   ├── java/com/retail/platform/retaildatastream/
+│       │   │   ├── consumer/
+│       │   │   ├── processor/
+│       │   │   └── config/
+│       │   └── resources/
+│       │       ├── application.yml
+│       │       └── schema.cql
+│       └── test/
+├── metrics-service/
+│   ├── build.gradle
+│   └── src/
+│       ├── main/
+│       │   ├── java/com/retail/platform/metrics/
+│       │   │   ├── controller/
+│       │   │   └── service/
+│       │   └── resources/
+│       │       └── application.yml
+│       └── test/
+├── ad-service/
+│   ├── build.gradle
+│   └── src/
+│       ├── main/
+│       │   ├── java/com/retail/platform/ad/
+│       │   │   ├── controller/
+│       │   ├── service/
+│       │   └── model/
+│       │   └── resources/
+│       │       └── application.yml
+│       └── test/
+├── user-tenant-service/
+│   ├── build.gradle
+│   └── src/
+│       ├── main/
+│       │   ├── java/com/retail/platform/usertenant/
+│       │   │   ├── controller/
+│       │   │   └── service/
+│       │   └── resources/
+│       │       └── application.yml
+│       └── test/
+├── api-gateway/
+│   ├── configuration/
+│   └── helm/  (if using K8s)
+├── auth-service/
+│   ├── build.gradle
+│   └── src/
+│       ├── main/
+│       │   ├── java/com/retail/platform/auth/
+│       │   ├── resources/
+│       │   │   └── application.yml
+│       └── test/
+├── observability/
+│   ├── prometheus/
+│   ├── grafana/
+│   └── elk/
+├── deployment/
+│   ├── k8s/
+│   └── terraform/
+├── docker-compose.yml
+├── settings.gradle
+└── README.md
