@@ -2,7 +2,7 @@
 A real-time streaming platform for an online shopping network. This platform will process real- time data from retailer websites, capturing customer interactions, ad engagements, etc. The processed data will be utilized to generate insights via APIs, enabling end users to optimize their advertising campaigns &amp; enhance user engagement.
 
 ### Code Flow Diagram:
-![alt text](./System Design/CodeFlowDiagram/Retail Platform Flow Diagram.png)
+![alt text](https://github.com/AishwaryaMahindru/retail-platform/blob/main/System%20Design/CodeFlowDiagram/Retail%20Platform%20Flow%20Diagram.png)
 
 
 ### Note:
@@ -56,3 +56,4 @@ Please refer APIs in Postman Collection at path:
 |   3   | **Get Retail Metrics**       | `GET`      | `http://localhost:8080/api/v1/metrics`                                    | `Content-Type: application/json``X-Tenant-Id: retailerA` | Bearer Token | **Optional Query Params:** `tenantId=retailerA` `productId=P123`                                                                                       | Retrieves aggregated metrics (views, clicks, conversions) across tenants or specific products. |
 |   4   | **Ad Click Count Increment** | `POST`     | `http://localhost:8080/api/v1/ad/CAMPAIGN_1001/click`                     | `Content-Type: application/json``X-Tenant-Id: retailerA` | Bearer Token | **Path Variable:** `campaignId=CAMPAIGN_1001`                                                                                                          | Increments ad click count for the given campaign and tenant.
 |   5   | **Get Ad Click Count**       | `GET`      | `http://localhost:8080/api/v1/ad/CAMPAIGN_1001/clicks`                    | `Content-Type: application/json``X-Tenant-Id: retailerA` | Bearer Token | **Path Variable:** `campaignId=CAMPAIGN_1001`                                                                                                          | Returns total click count and related ad engagement statistics for a specific campaign.        |
+
