@@ -1,4 +1,4 @@
-# retail-data-stream
+# Retail Platform
 A real-time streaming platform for an online shopping network. This platform will process real- time data from retailer websites, capturing customer interactions, ad engagements, etc. The processed data will be utilized to generate insights via APIs, enabling end users to optimize their advertising campaigns &amp; enhance user engagement.
 
 ### Note:
@@ -17,7 +17,7 @@ In a production-ready architecture, these would be separate microservices with t
 - Every tenant (retailer) has a unique **tenantId** in the request headers specified by X-Tenant-Id
 - All microservices validate tenant context.
 
-## 🧪 Local Setup
+## Local Setup
 
 ### Prerequisites
 - **Java 21+**
